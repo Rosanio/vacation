@@ -12,69 +12,74 @@ $(function() {
     });
 
     $('.user_name').text(name);
-    if (age > 65) {
-      if (weather === "warm") {
-        if (globeHalf === "north") {
-          $('.florida_retirement').show();
-        } else if (globeHalf === "south") {
-          $('.australia_retirement').show();
-        } else {
-          $('.brazil_retirement').show();
-        }
-      } else if (weather === "cold") {
-        if (globeHalf === "north") {
-          $('.sweden_retirement').show();
-        } else if (globeHalf === "south") {
-          $('.cape_horn_retirement').show();
-        } else {
-          $('.equator_cold').show();
-        }
-      }
+    if (name.length === 0) {
+      alert('Please enter your name');
+    } else if (age.length === 0) {
+      alert('Please enter your age')
     } else {
-      alert('hi');
-      if (weather === "warm") {
-        if (globeHalf === "north") {
-          if (tourist === "love") {
-            $('.los_angeles').show();
-          } else if (tourist === "meh") {
-            $('.sedona').show();
+      if (age > 65) {
+        if (weather === "warm") {
+          if (globeHalf === "north") {
+            $('.florida_retirement').show();
+          } else if (globeHalf === "south") {
+            $('.australia_retirement').show();
           } else {
-            $('.plattsmouth').show();
+            $('.brazil_retirement').show();
           }
-        } else if (globeHalf === "south") {
-          if (tourist === "love") {
-            $('.sao_paulo').show();
-          } else if (tourist === "meh") {
-            $('.gold_coast').show();
+        } else if (weather === "cold") {
+          if (globeHalf === "north") {
+            $('.sweden_retirement').show();
+          } else if (globeHalf === "south") {
+            $('.cape_horn_retirement').show();
           } else {
-            $('.swaziland').show();
-          }
-        } else {
-          if (tourist === "love") {
-            $('.jakarta').show();
-          } else if (tourist === "meh") {
-            $('.singapore').show();
-          } else {
-            $('.entebee').show();
+            $('.equator_cold').show();
           }
         }
       } else {
-        if (globeHalf === "north") {
-          if (tourist === "love") {
-            $('.toronto').show();
-          } else if (tourist === "meh") {
-            $('.oslo').show();
+        if (weather === "warm") {
+          if (globeHalf === "north") {
+            if (tourist === "love") {
+              $('.los_angeles').show();
+            } else if (tourist === "meh") {
+              $('.sedona').show();
+            } else {
+              $('.plattsmouth').show();
+            }
+          } else if (globeHalf === "south") {
+            if (tourist === "love") {
+              $('.sao_paulo').show();
+            } else if (tourist === "meh") {
+              $('.gold_coast').show();
+            } else {
+              $('.swaziland').show();
+            }
           } else {
-            $('.arctic').show();
-          }
-        } else if (globeHalf === "south") {
-          if (tourist === "love" || tourist === "meh") {
-            $('.cape_horn').show();
-          } else {
-            $('.antarctic').show();
+            if (tourist === "love") {
+              $('.jakarta').show();
+            } else if (tourist === "meh") {
+              $('.singapore').show();
+            } else {
+              $('.entebee').show();
+            }
           }
         } else {
-          $('.equator_cold').show();
+          if (globeHalf === "north") {
+            if (tourist === "love") {
+              $('.toronto').show();
+            } else if (tourist === "meh") {
+              $('.oslo').show();
+            } else {
+              $('.arctic').show();
+            }
+          } else if (globeHalf === "south") {
+            if (tourist === "love" || tourist === "meh") {
+              $('.cape_horn').show();
+            } else {
+              $('.antarctic').show();
+            }
+          } else {
+            $('.equator_cold').show();
+          }
         }
       }
     }
