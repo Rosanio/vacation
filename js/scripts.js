@@ -6,70 +6,79 @@ $(function() {
     var tourist = $('input[name="qu4"]:checked', '#questions').val();
     var globeHalf = $('select#q5').val();
 
+    var answers = ['.florida_retirement', '.australia_retirement', '.brazil_retirement', '.sweden_retirement', '.cape_horn_retirement', '.equator_cold', '.los_angeles', '.sedona', '.plattsmouth', '.sao_paulo', '.gold_coast', '.swaziland', '.jakarta', '.singapore', '.entebee', '.toronto', '.oslo', '.arctic', '.cape_horn', '.antarctic'];
+    answers.forEach(function(answer) {
+      $(answer).hide();
+    });
+
+    $('.user_name').text(name);
     if (age > 65) {
       if (weather === "warm") {
         if (globeHalf === "north") {
-          //retirement in Florida
+          $('.florida_retirement').show();
         } else if (globeHalf === "south") {
-          //retirement in Australia
+          $('.australia_retirement').show();
         } else {
-          //retirement in Amapa Brazil
+          $('.brazil_retirement').show();
         }
       } else if (weather === "cold") {
         if (globeHalf === "north") {
-          //retirement in sweden
+          $('.sweden_retirement').show();
         } else if (globeHalf === "south") {
-          //retirement in cape horn
+          $('.cape_horn_retirement').show();
         } else {
-          //no cold on the equator
+          $('.equator_cold').show();
         }
       }
     } else {
+      alert('hi');
       if (weather === "warm") {
         if (globeHalf === "north") {
           if (tourist === "love") {
-            //Los Angeles
+            $('.los_angeles').show();
           } else if (tourist === "meh") {
-            //Sedona, Arizona
+            $('.sedona').show();
           } else {
-            //Plattsmouth, Nebraska
+            $('.plattsmouth').show();
           }
         } else if (globeHalf === "south") {
           if (tourist === "love") {
-            //sao paulo, Brazil
+            $('.sao_paulo').show();
           } else if (tourist === "meh") {
-            //Gold Coast, Australia
+            $('.gold_coast').show();
           } else {
-            //swaziland, Africa
+            $('.swaziland').show();
           }
         } else {
           if (tourist === "love") {
-            //Jakarta
+            $('.jakarta').show();
           } else if (tourist === "meh") {
-            //Singapore
+            $('.singapore').show();
           } else {
-            //Entebee, Uganda
+            $('.entebee').show();
           }
         }
       } else {
         if (globeHalf === "north") {
           if (tourist === "love") {
-            //Toronto, Canada
+            $('.toronto').show();
           } else if (tourist === "meh") {
-            //Oslo, Norway
+            $('.oslo').show();
           } else {
-            //Arctic
+            $('.arctic').show();
           }
         } else if (globeHalf === "south") {
           if (tourist === "love" || tourist === "meh") {
-            //Cape Horn, South America
+            $('.cape_horn').show();
           } else {
-            //Antarctic
+            $('.antarctic').show();
           }
         } else {
-          //Nowhere cold on the equator
+          $('.equator_cold').show();
         }
       }
     }
+
+    event.preventDefault();
   });
 });

@@ -1,1 +1,72 @@
+/*Hide all image paragraph pairs*/
 
+.florida_retirement {
+  display: none;
+}
+.australia_retirement {
+  display: none;
+}
+.brazil_retirement {
+  display: none;
+}
+.sweden_retirement {
+  display: none;
+}
+.cape_horn_retirement {
+  display: none;
+}
+.equator_cold {
+  display: none;
+}
+.los_angeles {
+  display: none;
+}
+.sedona {
+  display: none;
+}
+.plattsmouth {
+  display: none;
+}
+.sao_paulo {
+  display: none;
+}
+.gold_coast {
+  display: none;
+}
+.swaziland {
+  display: none;
+}
+.jakarta {
+  display: none;
+}
+.singapore {
+  display: none;
+}
+.entebee {
+  display: none;
+}
+.toronto {
+  display: none;
+}
+.oslo {
+  display: none;
+}
+.arctic {
+  display: none;
+}
+.cape_horn {
+  display: none;
+}
+.antarctic {
+  display: none;
+}
+
+#classy {
+  color: red;
+  font-weight: bold;
+  text-decoration: underline;
+}
+h1 {
+  text-align: center;
+  font-family: serif;
+}
